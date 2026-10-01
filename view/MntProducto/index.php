@@ -35,7 +35,7 @@
     <link href="../../public/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="../../public/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="../../public/lib/jquery-switchbutton/jquery.switchButton.css" rel="stylesheet">
-
+    <link href="../../public/lib/datatables/jquery.dataTables.css" rel="stylesheet">
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../../public/css/bracket.css">
   </head>
@@ -47,16 +47,14 @@
     <div class="br-sideleft overflow-y-auto">
       <label class="sidebar-label pd-x-15 mg-t-20">Navegación</label>
       <div class="br-sideleft-menu">
-        
-      <a href="../../index.php" class="br-menu-link">
+
+        <a href="../../index.php" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
             <span class="menu-item-label">Inicio</span>
-         
-        
-        </div><!-- menu-item -->
-    </a><!-- br-menu-link -->
-        
+          </div><!-- menu-item -->
+
+        </a><!-- br-menu-link -->
         <a href="#" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-filing-outline tx-24"></i>
@@ -65,24 +63,12 @@
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
 
-
         <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item"><a href="" class="nav-link">Productos</a></li>
+          <li class="nav-item"><a href="accordion.html" class="nav-link">Productos</a></li>
         </ul>
-        </div>
-
-        
-        </a><!-- br-menu-link -->
-        <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item"><a href="navigation.html" class="nav-link">Basic Nav</a></li>
-          <li class="nav-item"><a href="navigation-layouts.html" class="nav-link">Nav Layouts</a></li>
-        </ul>
-
-
-
-      
-
-      <label class="sidebar-label pd-x-15 mg-t-25 mg-b-20 tx-info op-9">Sistema Ventas UniNorte</label>
+        <a href="#" class="br-menu-link">
+    </div>
+      <label class="sidebar-label pd-x-15 mg-t-25 mg-b-20 tx-info op-9">Sistema de Ventas UniNorte</label>
 
       <div class="info-list">
         <div class="d-flex align-items-center justify-content-between pd-x-15">
@@ -693,19 +679,43 @@
     <div class="br-mainpanel">
       <div class="br-pageheader pd-y-15 pd-l-20">
         <nav class="breadcrumb pd-0 mg-0 tx-12">
-          <a class="breadcrumb-item" href="index.html">Sistema Ventas</a>
+          <a class="breadcrumb-item" href="index.html">Sistems Ventas</a>
           <span class="breadcrumb-item active">Productos</span>
         </nav>
       </div><!-- br-pageheader -->
       <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
         <h4 class="tx-gray-800 mg-b-5">Página de Productos</h4>
-        <p class="mg-b-0">Está página sera destinada al módulo de productos. (Página en mantenimiento)</p>
+        <p class="mg-b-0">Esta página será destinada al módulo de produtos. PÁGINA EN MANTENIMIENTO NO CHINGUE >;c.</p>
       </div>
 
       <div class="br-pagebody">
+        <div class="br-section-wrapper">
+          <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">MANTENIMIENTO DE PRODUCTOS</h6>
+          <p class="mg-b-25 mg-lg-b-50">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p>
 
-        <!-- start you own content here -->
-
+          <div class="table-wrapper">
+            <table id="producto_data" class="table display responsive nowrap">
+              <thead>
+                <tr>
+                  <th class="wd-15p">Nombre Producto</th>
+                  <th class="wd-15p">Editar</th>
+                  <th class="wd-20p">Eliminar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr>
+                  <td>Coca Cola 2L descartable</td>
+                  <td><div><i class="fa fa-pencil"></i></div></td>
+                  <td><div><i class="fa fa-trash"></i></div></td>
+                </tr>
+                 <tr>
+                  <td>Agua Mineral 3L descartable</td>
+                  <td><div><i class="fa fa-pencil"></i></div></td>
+                  <td><div><i class="fa fa-trash"></i></div></td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
       </div><!-- br-pagebody -->
 
     </div><!-- br-mainpanel -->
@@ -719,7 +729,35 @@
     <script src="../../public/lib/jquery-ui/jquery-ui.js"></script>
     <script src="../../public/lib/jquery-switchbutton/jquery.switchButton.js"></script>
     <script src="../../public/lib/peity/jquery.peity.js"></script>
+    <script src="../../public/lib/datatables/jquery.dataTables.js"></script>
+    <script src="../../public/lib/datatables-responsive/dataTables.responsive.js"></script>
 
     <script src="../../public/js/bracket.js"></script>
+    <script src="mntproducto.js"></script>
+     <!-- <script>
+    
+      $(function(){
+        'use strict';
+
+        $('#datatable1').DataTable({
+          responsive: true,
+          language: {
+            searchPlaceholder: 'Buscar...',
+            sSearch: '',
+            lengthMenu: '_MENU_ item/página',
+          }
+        });
+
+        $('#datatable2').DataTable({
+          bLengthChange: false,
+          searching: false,
+          responsive: true
+        });
+
+        // Select2
+        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+      });
+    </script> -->
   </body>
 </html>
